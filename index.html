@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Escape room</title>
+<meta name="description" content="Tutte le escape room in un posto solo: scegli una stanza e trova la via d’uscita.">
+<meta name="theme-color" content="#1E6FD9">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Escape room">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMAAAADACAIAAADdvvtQAAAEAklEQVR42u3dMW7bMBSH8VgQ4EMUSM7UIWfomDVH8BVyhgw9T0YPPUSADB0MGIEt27FESY98vw8dnMKRRPLT/5GywWweXz4egLF0ugAEAoFAIBAIIBAIBAKBQACBQCAQCAQCCAQCgUAgEEAgEAgEAoFAIIBAIBAIBAIBBAKBQCC0TK8L2mO/2x5ePL1+SiCMtOfkNYFwnz3LONQv2aQFEnUiX+9/bnfZ8xtTFxLoRP/9bhvQoZ9Ic+n9ZEo9ib5XnUtHiKPR0+vnyU079x27mW+PxEvVd/UQmu5N8Oq25CosXQLNZ8/h4BEcWvIW7akzx1nyzI26he+DterXMvasdTqT6AbHMkkUzfsg8SRvlo+f1ZOg+SjaNLxTfZzBaziHOvbIIQJVMGCtOtSxx4URCATKcZe3F0JNrcJKDc+lRdPcx68RX2m9Y1yPb8jzoDlRAk0Z1HGRsPwZCRTOnukDueKpTaKj16xsExoCrTPwmR1qQaARRaT4kI84YBsz8YwJNFNg5Myh6gWq+j5uIITSJdCsOZEwhHwWBgJFSohsIVS3QA3MIWpvghIGAgUrLqmqmAQCgUCglqarc5xov9se/hEIY+wZfE0gKGEgEILzfU+BaHsE+lJ9fQ5JIChhAIGQfQ5km2YJBAKBQACBQCAQCAQCCAQCIT61bjDV5CZzNT5Yr0ygJJsTVmRSNQIl3NeyCo069mh14wJl3lM3ftujl7ArPfjv71dLrvz63ddYy0ILNGhPY9780KSwDnXsicZgG8PWsqAJdN5fGdS5GUUBc8iTaDQnkPi51OqAhayrsR8zO0QgKGGLL74Qtn+iJ1Dm+lVFDyhhIBAIhEqxP9Aw50+BzcYINFKd7/9PIwLdrQ6NzIHK2DPuzQRiD4cIBALFiR8hRCAQaNX4EUIEAoFAIBAIBAIINIKJn2r5UEwCgUArhZD4IRAItFIIiR8CjReCPQQCgUAgEAgEwp34GhCBQCAQSFUiEAgEEEjJIxAIBAIBBDKhIRDtCAQCAdcQwg8PvqIqgUAgEAgEApoSyLOW4D0Q7uL65zd/c+56/4z7xf1ue3z99PqphGGkPec/Ni5Q5ipWpO2DupRyKKJA5ymd06HzVo+uX1ZhsAqbHEJ5cmiwsQHjJ3QCDfZXBocG2zjFnsE1V6mF2Obx5SNyb15Z0jf2CeiVe6NI9sy0jC8p0OESC17cTYcyELNylS9hR8ELPmOoogcz21NMoPmeU2V2qIpW93X1ZpJyVtEN01fas02aVGPQFptEzzTJR4o50Hdp2JNrolbwWNSRQACBQCAQCAQCCAQCgUAgEEAgEAgEAoEAAoFAIBAIBAIBBAKBQCAQCCAQCAQCgUAAgUAgEAgEAo78B+iHYhMD2ZbyAAAAAElFTkSuQmCC">
+<link rel="apple-touch-icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALQAAAC0CAIAAACyr5FlAAAD2klEQVR42u3dQW7aUBCAYWIhcYhKzZmy6Bm67DZH4Ao9Qxc9T5cseohIWXSBVCFjQsDPZt7M96uLKEqTYH+Mn4GYp68//mykqQabQHAIDsEhOASH4BAcgkNwCA4JDsEhOASH4BAcgkNwCA7BIcEhOASH4BAcgkOx29oEPXbY744fPL++mRyakDH6GA4ydlc/08Fh5fSXXnT6zen91/ePts63n9YciwM/7HdxfHwM4tJXFoTytMTFWy4Nusf6+LyJK/enRysZbd7ltmqJs5VWLE6/2wOJPL++rXO2ssWiRyLrzOCBjOA/ItuaY3LZseaCY/19lnK5utTkGFHILSPrCHlKdqnJx+6kZPNjIMP8yI8jyI7J5GMgg4/MOALujBw+PCurvGcr8++jl04xlvvOcESX8fk9t85PCVjFlwneusOOX5/7kfJsa4779tbdd+X7/mPXpApNjvkTvtoI6XVy3LqHGh77b/1W/WJyKqvaOJqfMhR5PWmXOG4a1AvtyJu+badHFocVVcWx6PxPf3AxOZQIR6fH7x5/7cyTY4Wxn/vI4rAiOATHyof5tj/isN8d/8GhsYzJj+GQw4rg0B2d/sVokAvduJpgUB8mhxxW1Gf9HVaKX+HP5BAcgkNwCA7BIcEhOASHGtbTxVvS/Hl7Lw/ydoAj8SUPgisJjaPIlTDCEhnIcEs7mxyT2+vv7/ccGr68bLuYHxFxnMtIw+JjItF8hMMxkpGSxQdEQvkYyHhso9sYav0x9LLV6viAo/TpSS/bYXBncnv7O6wIjolZWm1snN/qIEcWk0NwCA41zB9SbzZTj2TXXPfAcYXF6eeLExnImPMFcBSVwcdABh9wzNrZNX04lRUcs2dAweFhcggOwSE4BIfgEBwhuvu5tIJPwpkcgmPeDKj53H3RyXHTzi77qo66h5VP7vLKr/ex5hAcgkNwCI4l8xpSOASH4BAcgiP8arT4mtTkEByCQ3AIjgCr0cprUpNDcOj2Kk5L1/syOQSH4BAcgkNnBXwoJQqO0/c2K371z8297/R22O+O/0wOjWVMfpwQR7XhMfP2nmto4iMQjuBv7L6ajDjbYch6Zyq12iiBY7Rp0vv48rJtchufX9+ufibD5Dj3kZVI27crP9XQRMYm5nvZby68A16OJ8wuWQ+45GqG47g8bmV2U+w9iGMuxtvgOD1x4iPNOVoDHOen1A195CYS/Ox929EWTKOkl0d0Qh9W9NjanMr+B0FGqqNeq2+EhckhOCQ4BIfgEByCQ3AIDsEhOASH4JDgEByCQ3AIDsEhOASH4BAcEhyCQ3AIDsGhKP0Drx5VV7DjKksAAAAASUVORK5CYII=">
+<link rel="manifest" id="mf">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Nunito:wght@600;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --sky:#1E6FD9; --sky-deep:#1659B3; --paper:#FFF7E0; --ink:#1A1A40; --ink-soft:#4A4A70;
+  --sun:#FFC93C; --tomato:#FF5E5B; --mint:#3DDC97; --grape:#8B5CF6; --teal:#2EC4B6;
+  --star:#FFF7E0;
+  color-scheme:light;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --sky:#0E2350; --sky-deep:#081838; --paper:#1C2D5A; --ink:#FFF7E0; --ink-soft:#C9C6E8;
+    --star:#FFC93C; color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --sky:#0E2350; --sky-deep:#081838; --paper:#1C2D5A; --ink:#FFF7E0; --ink-soft:#C9C6E8;
+  --star:#FFC93C; color-scheme:dark;
+}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-padding-top:env(safe-area-inset-top,0px);background:var(--sky)}
+body{
+  margin:0;min-height:100%;
+  font-family:"Nunito",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  color:var(--ink);
+  background:
+    radial-gradient(circle at 12% 8%,var(--star) 0 3px,transparent 4px),
+    radial-gradient(circle at 86% 14%,var(--star) 0 2px,transparent 3px),
+    radial-gradient(circle at 70% 4%,var(--star) 0 2px,transparent 3px),
+    radial-gradient(circle at 30% 22%,var(--star) 0 2px,transparent 3px),
+    var(--sky);
+  background-attachment:fixed;
+}
+main{max-width:920px;margin:0 auto;padding:28px 18px 40px}
+
+/* ---- testata con il lucchetto ---- */
+header{text-align:center;padding:8px 0 26px}
+.lock{width:112px;height:126px;display:block;margin:0 auto 6px}
+.lock .shackle{transform-origin:76px 60px;animation:open 1.1s .5s cubic-bezier(.3,1.6,.5,1) both}
+@keyframes open{from{transform:translateY(16px) rotate(0)}to{transform:translateY(0) rotate(-18deg)}}
+h1{
+  font-family:"Lilita One","Arial Rounded MT Bold","Trebuchet MS",sans-serif;font-weight:400;
+  font-size:clamp(2.6rem,11vw,4.4rem);line-height:1;margin:0;color:#FFF7E0;letter-spacing:.01em;
+  text-shadow:0 4px 0 var(--sky-deep),0 7px 0 rgba(0,0,0,.18);
+}
+header p{margin:12px auto 0;max-width:30ch;color:#FFF7E0;font-size:1.12rem;font-weight:600;line-height:1.4}
+
+/* ---- le cartoline-chiave ---- */
+.rooms{list-style:none;margin:0;padding:0;display:grid;gap:22px;grid-template-columns:1fr}
+@media (min-width:680px){.rooms{grid-template-columns:1fr 1fr}}
+.rooms li:nth-child(odd) .tag{transform:rotate(-1.2deg)}
+.rooms li:nth-child(even) .tag{transform:rotate(1deg)}
+.tag{
+  position:relative;display:grid;grid-template-columns:92px 1fr;min-height:150px;
+  text-decoration:none;color:var(--ink);background:var(--paper);
+  border:3px solid var(--ink);border-radius:20px 28px 28px 20px;
+  box-shadow:0 6px 0 var(--ink);
+  transition:transform .15s ease,box-shadow .15s ease;
+  -webkit-tap-highlight-color:transparent;
+}
+.tag:hover{transform:rotate(0) translateY(-3px)!important;box-shadow:0 9px 0 var(--ink)}
+.tag:active{transform:rotate(0) translateY(4px)!important;box-shadow:0 2px 0 var(--ink)}
+.tag:focus-visible{outline:4px solid var(--sun);outline-offset:4px}
+.strip{
+  background:var(--c);border-right:3px dashed var(--ink);border-radius:17px 0 0 17px;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;
+}
+.hole{width:18px;height:18px;border-radius:50%;background:var(--sky);border:3px solid var(--ink)}
+.emoji{font-size:2.6rem;line-height:1;filter:drop-shadow(0 2px 0 rgba(26,26,64,.35))}
+.body{padding:16px 18px 18px;display:flex;flex-direction:column}
+.body h2{font-family:"Lilita One","Arial Rounded MT Bold",sans-serif;font-weight:400;font-size:1.55rem;line-height:1.1;margin:0 0 6px}
+.body p{margin:0;font-size:1rem;line-height:1.45;color:var(--ink-soft)}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:auto;padding-top:12px}
+.chip{font-size:.85rem;font-weight:800;padding:3px 10px;border-radius:999px;background:var(--c);color:#1A1A40;border:2px solid var(--ink)}
+.play{
+  align-self:flex-start;margin-top:12px;font-weight:800;font-size:1rem;
+  padding:8px 16px;border-radius:999px;background:var(--ink);color:var(--paper);
+}
+
+footer{margin-top:36px;text-align:center;color:#FFF7E0;font-size:.95rem;line-height:1.5}
+footer b{font-weight:800}
+
+@media (prefers-reduced-motion:reduce){
+  .lock .shackle{animation:none;transform:rotate(-18deg)}
+  .tag{transition:none}
+}
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <svg class="lock" viewBox="0 0 152 172" aria-hidden="true">
+      <g class="shackle" fill="none" stroke="#1A1A40" stroke-width="16" stroke-linecap="round">
+        <path d="M46 84 V52 a30 30 0 0 1 60 0 V84"/>
+      </g>
+      <rect x="14" y="74" width="124" height="92" rx="22" fill="#FFC93C" stroke="#1A1A40" stroke-width="6"/>
+      <circle cx="76" cy="110" r="13" fill="#1A1A40"/>
+      <path d="M69 118 h14 l5 28 h-24z" fill="#1A1A40"/>
+    </svg>
+    <h1>Escape room</h1>
+    <p>Scegli una stanza, cerca gli indizi e trova la via d’uscita.</p>
+  </header>
+
+  <ul class="rooms">
+    <li><a class="tag" style="--c:var(--sun)" href="https://escaperoomvaticano.netlify.app/">
+      <span class="strip"><span class="hole"></span><span class="emoji">⛪</span></span>
+      <span class="body">
+        <h2>Chiusi nella Pieve</h2>
+        <p>Sei rimasto chiuso in una vecchia chiesa: esplora navata, cripta e campanile. L’avventura continua nel Labirinto d’acqua e nella Cripta di San Cristoforo.</p>
+        <span class="chips"><span class="chip">Avventura a tappe</span></span>
+        <span class="play">Gioca</span>
+      </span></a></li>
+
+    <li><a class="tag" style="--c:var(--grape)" href="https://moonlit-hotteok-f6a94a.netlify.app/">
+      <span class="strip"><span class="hole"></span><span class="emoji">🪐</span></span>
+      <span class="body">
+        <h2>Deriva su Kethra</h2>
+        <p>Atterraggio d’emergenza su un pianeta con tre lune. Risolvi gli enigmi e riparti con un’astronave misteriosa.</p>
+        <span class="chips"><span class="chip">Spazio</span></span>
+        <span class="play">Gioca</span>
+      </span></a></li>
+
+    <li><a class="tag" style="--c:var(--tomato)" href="https://leafy-chebakia-3cfc7d.netlify.app/">
+      <span class="strip"><span class="hole"></span><span class="emoji">🔓</span></span>
+      <span class="body">
+        <h2>La Cella</h2>
+        <p>Ti svegli in una cella con la porta blindata. Chi c’era prima di te ha lasciato degli indizi: fruga ovunque!</p>
+        <span class="chips"><span class="chip">Versione a colori</span></span>
+        <span class="play">Gioca</span>
+      </span></a></li>
+
+    <li><a class="tag" style="--c:var(--teal)" href="https://sparkling-lokum-55782d.netlify.app/">
+      <span class="strip"><span class="hole"></span><span class="emoji">🖥️</span></span>
+      <span class="body">
+        <h2>La Cella al terminale</h2>
+        <p>La stessa fuga in stile vecchio computer. Attenzione: la cella si riempie d’acqua, devi fare in fretta.</p>
+        <span class="chips"><span class="chip">Con il tempo</span></span>
+        <span class="play">Gioca</span>
+      </span></a></li>
+
+    <li><a class="tag" style="--c:var(--mint)" href="https://escape-room-games1.netlify.app/">
+      <span class="strip"><span class="hole"></span><span class="emoji">🧪</span></span>
+      <span class="body">
+        <h2>Laboratorio segreto</h2>
+        <p>Due stanze da risolvere: il laboratorio Sublevel-7 e l’archivio criogenico.</p>
+        <span class="chips"><span class="chip">Due stanze</span></span>
+        <span class="play">Gioca</span>
+      </span></a></li>
+  </ul>
+
+  <footer>
+    Vuoi l’icona sul telefono? Apri il menu del browser e tocca <b>Aggiungi a schermata Home</b>.
+  </footer>
+</main>
+
+<script>
+(function(){
+  try{
+    var base=location.href.split('#')[0].split('?')[0];
+    var m={
+      name:"Escape room",short_name:"Escape room",
+      description:"Tutte le escape room in un posto solo",
+      start_url:base,scope:base.replace(/[^\/]*$/,''),
+      display:"standalone",background_color:"#1E6FD9",theme_color:"#1E6FD9",lang:"it",
+      icons:[
+        {src:"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMAAAADACAIAAADdvvtQAAAEAklEQVR42u3dMW7bMBSH8VgQ4EMUSM7UIWfomDVH8BVyhgw9T0YPPUSADB0MGIEt27FESY98vw8dnMKRRPLT/5GywWweXz4egLF0ugAEAoFAIBAIIBAIBAKBQACBQCAQCAQCCAQCgUAgEEAgEAgEAoFAIIBAIBAIBAIBBAKBQCC0TK8L2mO/2x5ePL1+SiCMtOfkNYFwnz3LONQv2aQFEnUiX+9/bnfZ8xtTFxLoRP/9bhvQoZ9Ic+n9ZEo9ib5XnUtHiKPR0+vnyU079x27mW+PxEvVd/UQmu5N8Oq25CosXQLNZ8/h4BEcWvIW7akzx1nyzI26he+DterXMvasdTqT6AbHMkkUzfsg8SRvlo+f1ZOg+SjaNLxTfZzBaziHOvbIIQJVMGCtOtSxx4URCATKcZe3F0JNrcJKDc+lRdPcx68RX2m9Y1yPb8jzoDlRAk0Z1HGRsPwZCRTOnukDueKpTaKj16xsExoCrTPwmR1qQaARRaT4kI84YBsz8YwJNFNg5Myh6gWq+j5uIITSJdCsOZEwhHwWBgJFSohsIVS3QA3MIWpvghIGAgUrLqmqmAQCgUCglqarc5xov9se/hEIY+wZfE0gKGEgEILzfU+BaHsE+lJ9fQ5JIChhAIGQfQ5km2YJBAKBQACBQCAQCAQCCAQCIT61bjDV5CZzNT5Yr0ygJJsTVmRSNQIl3NeyCo069mh14wJl3lM3ftujl7ArPfjv71dLrvz63ddYy0ILNGhPY9780KSwDnXsicZgG8PWsqAJdN5fGdS5GUUBc8iTaDQnkPi51OqAhayrsR8zO0QgKGGLL74Qtn+iJ1Dm+lVFDyhhIBAIhEqxP9Aw50+BzcYINFKd7/9PIwLdrQ6NzIHK2DPuzQRiD4cIBALFiR8hRCAQaNX4EUIEAoFAIBAIBAIINIKJn2r5UEwCgUArhZD4IRAItFIIiR8CjReCPQQCgUAgEAgEwp34GhCBQCAQSFUiEAgEEEjJIxAIBAIBBDKhIRDtCAQCAdcQwg8PvqIqgUAgEAgEApoSyLOW4D0Q7uL65zd/c+56/4z7xf1ue3z99PqphGGkPec/Ni5Q5ipWpO2DupRyKKJA5ymd06HzVo+uX1ZhsAqbHEJ5cmiwsQHjJ3QCDfZXBocG2zjFnsE1V6mF2Obx5SNyb15Z0jf2CeiVe6NI9sy0jC8p0OESC17cTYcyELNylS9hR8ELPmOoogcz21NMoPmeU2V2qIpW93X1ZpJyVtEN01fas02aVGPQFptEzzTJR4o50Hdp2JNrolbwWNSRQACBQCAQCAQCCAQCgUAgEEAgEAgEAoEAAoFAIBAIBAIBBAKBQCAQCCAQCAQCgUAAgUAgEAgEAo78B+iHYhMD2ZbyAAAAAElFTkSuQmCC",sizes:"192x192",type:"image/png",purpose:"any"},
+        {src:"data:image/png;base64,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",sizes:"512x512",type:"image/png",purpose:"any"},
+        {src:"data:image/png;base64,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",sizes:"512x512",type:"image/png",purpose:"maskable"}
+      ]
+    };
+    document.getElementById('mf').href='data:application/manifest+json;charset=utf-8,'+encodeURIComponent(JSON.stringify(m));
+  }catch(e){}
+})();
+</script>
+</body>
+</html>
